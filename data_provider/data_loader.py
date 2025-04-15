@@ -41,33 +41,8 @@ class Dataset_ETT_hour(Dataset):
         df_raw = pd.read_csv(os.path.join(self.root_path,
                                           self.data_path))
 
-        # border1s = [0, 12 * 30 * 24 * - self.seq_len, 12 * 30 * 24 + 4 * 30 * 24 - self.seq_len]
-        # border2s = [12 * 30 * 24, 12 * 30 * 24 + 4 * 30 * 24, 12 * 30 * 24 + 8 * 30 * 24]
-        train_months = 12  # 训练集总时长（原12）
-        overlap_months = 6  # 测试集与训练集重叠的月份数
-        test_months = 4  # 测试集总时长（保持不变）
-
-        # 计算各时段边界点（单位：小时）
-        border1s = [
-            0,  # 训练集起点：0小时
-
-            # 验证集起点 = 训练集结束点 - seq_len
-            train_months * 30 * 24 - self.seq_len,
-
-            # 测试集起点 = (训练结束点 - 重叠月份) - seq_len
-            (train_months - overlap_months) * 30 * 24 - self.seq_len  # 关键修改点
-        ]
-
-        border2s = [
-            train_months * 30 * 24,  # 训练集结束点：16个月
-
-            # 验证集结束点 = 训练集结束点 + 验证月份（保持原逻辑）
-            (train_months + 4) * 30 * 24,
-
-            # 测试集结束点 = 测试起点 + 测试总月份
-            (train_months - overlap_months + test_months) * 30 * 24  # 14+4=18个月
-        ]
-
+        border1s = [0, 12 * 30 * 24 * - self.seq_len, 12 * 30 * 24 + 4 * 30 * 24 - self.seq_len]
+        border2s = [12 * 30 * 24, 12 * 30 * 24 + 4 * 30 * 24, 12 * 30 * 24 + 8 * 30 * 24]
         border1 = border1s[self.set_type]
         border2 = border2s[self.set_type]
 
@@ -251,7 +226,6 @@ class Dataset_Custom(Dataset):
         # print(cols)
         num_train = int(len(df_raw) * 0.7)
         num_test = int(len(df_raw) * 0.2)
-        num_vali = len(df_raw) - num_train - num_test
         num_train = num_train + int(num_test * self.timot) + int(num_vali * self.timeov)
         border1s = [0, num_train - self.seq_len, len(df_raw) - num_test - self.seq_len]
         border2s = [num_train, num_train  + num_vali, len(df_raw)]
