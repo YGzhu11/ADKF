@@ -81,7 +81,7 @@ if __name__ == '__main__':
     parser.add_argument('--gpu', type=int, default=0, help='gpu')
     parser.add_argument('--use_multi_gpu', action='store_true', help='use multiple gpus', default=False)
     parser.add_argument('--devices', type=str, default='0,1,2,3', help='device ids of multile gpus')
-    parser.add_argument('--RATIO', type=float, default=1e7)
+    parser.add_argument('--RATIO', type=float, default=1e6)
 
     #Time Mixer
 
