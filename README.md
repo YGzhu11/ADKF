@@ -11,6 +11,7 @@ A long-term forecasting model based on Kernel Adaptive Network (KAN), designed f
 - Industrial equipment lifespan forecasting
 
 ## 🛠️ Environment Configuration
+
 Configuration
 dependencies:
   python: ">=3.9"
@@ -19,6 +20,7 @@ dependencies:
 Other essential_packages in requirements.txt
 
 🚀 Quick Start
+
 Training
 bash ADKF-main/configs/ADKF.sh --is_training 1
 
