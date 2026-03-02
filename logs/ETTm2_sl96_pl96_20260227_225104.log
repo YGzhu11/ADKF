@@ -1,0 +1,62 @@
+/home/zyg/miniconda3/envs/informer/lib/python3.10/site-packages/torch/cuda/__init__.py:54: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Logging to file: ./Re_log/ETTm2_sl96_pl96_ADKF_ETTm2_sl96_20260227_225106.log
+Args in experiment:
+Namespace(is_training=1, model_id='ETTm2_sl96_pl96', model='ADKF', data='ETTm2', root_path='/home/zyg/data/time_series/ETT-small/', data_path='ETTm2.csv', features='M', target='OT', freq='t', checkpoints='./checkpoints/', seq_len=96, label_len=48, pred_len=96, individual=False, seg=20, experts=4, channel=7, d_model=16, d_ff=32, var_num=7, num_experts=4, kernel_size=25, layers=2, embed='timeF', e_layers=2, moving_avg=25, do_predict=False, rev=False, dropout=0.1, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=3, down_sampling_window=2, down_sampling_method='avg', top_k=5, num_layers=1, num_workers=10, itr=1, train_epochs=50, batch_size=32, patience=5, learning_rate=0.001, lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', RATIO=10000000.0, task_name='long_term_forecast', d_layers=1, factor=3, enc_in=7, dec_in=7, c_out=7, des='Exp', use_future_temporal_feature=0, activation='gelu', output_attention=False, n_heads=8, affine=0, subtract_last=0, decomposition=0, stride=8, padding_patch='end', accumulation_steps=32)
+Use GPU: cuda:0
+Number of parameters: 0.0076M
+>>>>>>>start training : ETTm2_sl96_pl96_ADKF_ftETTm2_slM_pl96_dm96_eb16_timeF>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 8449
+val 2785
+test 2785
+	iters: 100, epoch: 1 | loss: 0.2583404
+	speed: 0.0104s/iter; left time: 136.2541s
+	iters: 200, epoch: 1 | loss: 0.2357314
+	speed: 0.0091s/iter; left time: 117.7520s
+Epoch: 1 cost time: 2.4515879154205322
+Epoch: 1, Steps: 264 | Train Loss: 0.5703973 Vali Loss: 0.4297001 Test Loss: 0.4753904
+Validation loss decreased (inf --> 0.429700).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.2194787
+	speed: 0.0219s/iter; left time: 280.5822s
+	iters: 200, epoch: 2 | loss: 0.2770110
+	speed: 0.0077s/iter; left time: 98.5674s
+Epoch: 2 cost time: 2.1712560653686523
+Epoch: 2, Steps: 264 | Train Loss: 0.4748536 Vali Loss: 0.4423045 Test Loss: 0.4839762
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.2237510
+	speed: 0.0224s/iter; left time: 281.7007s
+	iters: 200, epoch: 3 | loss: 0.2032005
+	speed: 0.0079s/iter; left time: 98.2876s
+Epoch: 3 cost time: 2.218698501586914
+Epoch: 3, Steps: 264 | Train Loss: 0.4543906 Vali Loss: 0.4303811 Test Loss: 0.4712890
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.1743041
+	speed: 0.0223s/iter; left time: 274.0305s
+	iters: 200, epoch: 4 | loss: 0.2421238
+	speed: 0.0078s/iter; left time: 95.7497s
+Epoch: 4 cost time: 2.221287727355957
+Epoch: 4, Steps: 264 | Train Loss: 0.4443455 Vali Loss: 0.4308606 Test Loss: 0.4733735
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.1917159
+	speed: 0.0226s/iter; left time: 272.0962s
+	iters: 200, epoch: 5 | loss: 0.2250966
+	speed: 0.0079s/iter; left time: 94.9213s
+Epoch: 5 cost time: 2.2276816368103027
+Epoch: 5, Steps: 264 | Train Loss: 0.4396448 Vali Loss: 0.4341679 Test Loss: 0.4744254
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 6 | loss: 0.1974338
+	speed: 0.0229s/iter; left time: 270.2135s
+	iters: 200, epoch: 6 | loss: 0.2781014
+	speed: 0.0093s/iter; left time: 108.1901s
+Epoch: 6 cost time: 2.378180503845215
+Epoch: 6, Steps: 264 | Train Loss: 0.4376818 Vali Loss: 0.4318621 Test Loss: 0.4722931
+EarlyStopping counter: 5 out of 5
+Early stopping
+>>>>>>>testing : ETTm2_sl96_pl96_ADKF_ftETTm2_slM_pl96_dm96_eb16_timeF<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2785
+Inference time:  1.0272409915924072
