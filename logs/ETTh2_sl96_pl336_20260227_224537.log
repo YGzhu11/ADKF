@@ -1,0 +1,218 @@
+/home/zyg/miniconda3/envs/informer/lib/python3.10/site-packages/torch/cuda/__init__.py:54: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Logging to file: ./Re_log/ETTh2_sl96_pl336_ADKF_ETTh2_sl96_20260227_224539.log
+Args in experiment:
+Namespace(is_training=1, model_id='ETTh2_sl96_pl336', model='ADKF', data='ETTh2', root_path='/home/zyg/data/time_series/ETT-small/', data_path='ETTh2.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=96, label_len=48, pred_len=336, individual=False, seg=20, experts=4, channel=7, d_model=16, d_ff=32, var_num=7, num_experts=4, kernel_size=25, layers=2, embed='timeF', e_layers=2, moving_avg=25, do_predict=False, rev=False, dropout=0.1, channel_independence=1, decomp_method='AdaptiveDecomp', use_norm=1, down_sampling_layers=3, down_sampling_window=2, down_sampling_method='avg', top_k=5, num_layers=10, num_workers=10, itr=1, train_epochs=50, batch_size=16, patience=5, learning_rate=0.001, lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', RATIO=10000000.0, task_name='long_term_forecast', d_layers=1, factor=3, enc_in=7, dec_in=7, c_out=7, des='Exp', use_future_temporal_feature=0, activation='gelu', output_attention=False, n_heads=8, affine=0, subtract_last=0, decomposition=0, stride=8, padding_patch='end', accumulation_steps=32)
+Use GPU: cuda:0
+Number of parameters: 0.081M
+>>>>>>>start training : ETTh2_sl96_pl336_ADKF_ftETTh2_slM_pl96_dm336_eb16_timeF>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 8209
+val 2545
+test 2545
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+	iters: 100, epoch: 1 | loss: 0.3357950
+	speed: 0.0165s/iter; left time: 209.5148s
+	iters: 200, epoch: 1 | loss: 0.3988287
+	speed: 0.0132s/iter; left time: 166.7924s
+Epoch: 1 cost time: 3.852586507797241
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+Epoch: 1, Steps: 256 | Train Loss: 0.7154633 Vali Loss: 0.3707596 Test Loss: 1.4109967
+Validation loss decreased (inf --> 0.370760).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.4331474
+	speed: 0.0418s/iter; left time: 519.6616s
+	iters: 200, epoch: 2 | loss: 0.1533843
+	speed: 0.0153s/iter; left time: 189.4838s
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+Epoch: 2 cost time: 4.280271291732788
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+Epoch: 2, Steps: 256 | Train Loss: 0.6418068 Vali Loss: 0.3712654 Test Loss: 1.3443924
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.0005
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+	iters: 100, epoch: 3 | loss: 0.2790005
+	speed: 0.0350s/iter; left time: 426.6036s
+	iters: 200, epoch: 3 | loss: 0.2989127
+	speed: 0.0160s/iter; left time: 192.8210s
+Epoch: 3 cost time: 3.9025473594665527
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+Epoch: 3, Steps: 256 | Train Loss: 0.6231168 Vali Loss: 0.3740909 Test Loss: 1.3271765
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.2284873
+	speed: 0.0381s/iter; left time: 455.1218s
+	iters: 200, epoch: 4 | loss: 0.2573621
+	speed: 0.0177s/iter; left time: 209.9477s
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+Epoch: 4 cost time: 4.375992298126221
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+Epoch: 4, Steps: 256 | Train Loss: 0.6145374 Vali Loss: 0.3709264 Test Loss: 1.2963207
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.2588492
+	speed: 0.0418s/iter; left time: 488.2373s
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+	iters: 200, epoch: 5 | loss: 0.2940876
+	speed: 0.0159s/iter; left time: 184.3684s
+Epoch: 5 cost time: 4.310339689254761
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+Epoch: 5, Steps: 256 | Train Loss: 0.6095220 Vali Loss: 0.3706096 Test Loss: 1.2784599
+Validation loss decreased (0.370760 --> 0.370610).  Saving model ...
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 6 | loss: 0.2003821
+	speed: 0.0411s/iter; left time: 469.8818s
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+	iters: 200, epoch: 6 | loss: 0.3566022
+	speed: 0.0185s/iter; left time: 208.8754s
+Epoch: 6 cost time: 4.667759656906128
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+Epoch: 6, Steps: 256 | Train Loss: 0.6064008 Vali Loss: 0.3719605 Test Loss: 1.2780255
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 7 | loss: 0.3853448
+	speed: 0.0383s/iter; left time: 427.9582s
+	iters: 200, epoch: 7 | loss: 0.3040360
+	speed: 0.0148s/iter; left time: 163.5837s
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+Epoch: 7 cost time: 3.8865468502044678
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+Epoch: 7, Steps: 256 | Train Loss: 0.6049515 Vali Loss: 0.3717005 Test Loss: 1.2758145
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 1.5625e-05
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+	iters: 100, epoch: 8 | loss: 0.4609524
+	speed: 0.0309s/iter; left time: 336.9410s
+	iters: 200, epoch: 8 | loss: 0.3954228
+	speed: 0.0147s/iter; left time: 159.0138s
+Epoch: 8 cost time: 3.829273223876953
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+Epoch: 8, Steps: 256 | Train Loss: 0.6042261 Vali Loss: 0.3715918 Test Loss: 1.2754464
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 7.8125e-06
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+	iters: 100, epoch: 9 | loss: 0.2309351
+	speed: 0.0382s/iter; left time: 406.4674s
+	iters: 200, epoch: 9 | loss: 0.3121654
+	speed: 0.0135s/iter; left time: 142.0264s
+Epoch: 9 cost time: 3.7533528804779053
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+Epoch: 9, Steps: 256 | Train Loss: 0.6044009 Vali Loss: 0.3722307 Test Loss: 1.2748736
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 10 | loss: 0.2253361
+	speed: 0.0388s/iter; left time: 403.2781s
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+	iters: 200, epoch: 10 | loss: 0.2042172
+	speed: 0.0140s/iter; left time: 143.6850s
+Epoch: 10 cost time: 4.184417724609375
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+Epoch: 10, Steps: 256 | Train Loss: 0.6038943 Vali Loss: 0.3728680 Test Loss: 1.2746122
+EarlyStopping counter: 5 out of 5
+Early stopping
+>>>>>>>testing : ETTh2_sl96_pl336_ADKF_ftETTh2_slM_pl96_dm336_eb16_timeF<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2545
+
+[DEBUG DataLoader] => Expected seq_len: 96
+[DEBUG DataLoader] => Actual seq_x shape: (96, 7)
+[DEBUG DataLoader] => Actual seq_y shape: (336, 7)
+Inference time:  1.1047899723052979

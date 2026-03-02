@@ -1,0 +1,36 @@
+/home/zyg/miniconda3/envs/informer/lib/python3.10/site-packages/torch/cuda/__init__.py:54: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Logging to file: ./Re_log/Weather_sl96_pl720_ADKF_custom_sl96_20260227_224015.log
+Args in experiment:
+Namespace(is_training=1, model_id='Weather_sl96_pl720', model='ADKF', data='custom', root_path='/home/zyg/data/time_series/Weather/', data_path='Weather.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=96, label_len=48, pred_len=720, individual=False, seg=20, experts=4, channel=21, d_model=16, d_ff=32, var_num=21, num_experts=4, kernel_size=25, layers=2, embed='timeF', e_layers=2, moving_avg=25, do_predict=False, rev=False, dropout=0.1, channel_independence=1, decomp_method='AdaptiveDecomp', use_norm=1, down_sampling_layers=3, down_sampling_window=2, down_sampling_method='avg', top_k=5, num_layers=10, num_workers=10, itr=1, train_epochs=50, batch_size=16, patience=5, learning_rate=0.001, lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', RATIO=10000000.0, task_name='long_term_forecast', d_layers=1, factor=3, enc_in=21, dec_in=21, c_out=21, des='Exp', use_future_temporal_feature=0, activation='gelu', output_attention=False, n_heads=8, affine=0, subtract_last=0, decomposition=0, stride=8, padding_patch='end', accumulation_steps=32)
+Use GPU: cuda:0
+Number of parameters: 0.081M
+>>>>>>>start training : Weather_sl96_pl720_ADKF_ftWeather_slM_pl96_dm720_eb16_timeF>>>>>>>>>>>>>>>>>>>>>>>>>>
+Traceback (most recent call last):
+  File "/home/zyg/Project/ADKF-main/run.py", line 177, in <module>
+    exp.train(setting)
+  File "/home/zyg/Project/ADKF-main/exp/exp_main.py", line 98, in train
+    train_loader = self._get_data(flag='train')
+  File "/home/zyg/Project/ADKF-main/exp/exp_main.py", line 63, in _get_data
+    return data_provider(self.args, flag)
+  File "/home/zyg/Project/ADKF-main/data_provider/data_factory.py", line 37, in data_provider
+    data_set = Data(
+  File "/home/zyg/Project/ADKF-main/data_provider/data_loader.py", line 261, in __init__
+    self.__read_data__()
+  File "/home/zyg/Project/ADKF-main/data_provider/data_loader.py", line 265, in __read_data__
+    df_raw = pd.read_csv(os.path.join(self.root_path,
+  File "/home/zyg/miniconda3/envs/informer/lib/python3.10/site-packages/pandas/util/_decorators.py", line 211, in wrapper
+    return func(*args, **kwargs)
+  File "/home/zyg/miniconda3/envs/informer/lib/python3.10/site-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+  File "/home/zyg/miniconda3/envs/informer/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 950, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/zyg/miniconda3/envs/informer/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 605, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/zyg/miniconda3/envs/informer/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1442, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/home/zyg/miniconda3/envs/informer/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1735, in _make_engine
+    self.handles = get_handle(
+  File "/home/zyg/miniconda3/envs/informer/lib/python3.10/site-packages/pandas/io/common.py", line 856, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '/home/zyg/data/time_series/Weather/Weather.csv'

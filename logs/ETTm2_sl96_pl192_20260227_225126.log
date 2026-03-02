@@ -1,0 +1,62 @@
+/home/zyg/miniconda3/envs/informer/lib/python3.10/site-packages/torch/cuda/__init__.py:54: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Logging to file: ./Re_log/ETTm2_sl96_pl192_ADKF_ETTm2_sl96_20260227_225127.log
+Args in experiment:
+Namespace(is_training=1, model_id='ETTm2_sl96_pl192', model='ADKF', data='ETTm2', root_path='/home/zyg/data/time_series/ETT-small/', data_path='ETTm2.csv', features='M', target='OT', freq='t', checkpoints='./checkpoints/', seq_len=96, label_len=48, pred_len=192, individual=False, seg=20, experts=4, channel=7, d_model=16, d_ff=32, var_num=7, num_experts=4, kernel_size=25, layers=2, embed='timeF', e_layers=2, moving_avg=25, do_predict=False, rev=False, dropout=0.1, channel_independence=1, decomp_method='AdaptiveDecomp', use_norm=1, down_sampling_layers=3, down_sampling_window=2, down_sampling_method='avg', top_k=5, num_layers=10, num_workers=10, itr=1, train_epochs=50, batch_size=16, patience=5, learning_rate=0.001, lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', RATIO=10000000.0, task_name='long_term_forecast', d_layers=1, factor=3, enc_in=7, dec_in=7, c_out=7, des='Exp', use_future_temporal_feature=0, activation='gelu', output_attention=False, n_heads=8, affine=0, subtract_last=0, decomposition=0, stride=8, padding_patch='end', accumulation_steps=32)
+Use GPU: cuda:0
+Number of parameters: 0.081M
+>>>>>>>start training : ETTm2_sl96_pl192_ADKF_ftETTm2_slM_pl96_dm192_eb16_timeF>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 8353
+val 2689
+test 2689
+	iters: 100, epoch: 1 | loss: 0.3132142
+	speed: 0.0192s/iter; left time: 249.2945s
+	iters: 200, epoch: 1 | loss: 0.2778201
+	speed: 0.0124s/iter; left time: 159.2101s
+Epoch: 1 cost time: 4.084163188934326
+Epoch: 1, Steps: 261 | Train Loss: 0.6127076 Vali Loss: 0.4493284 Test Loss: 0.5167137
+Validation loss decreased (inf --> 0.449328).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.3123528
+	speed: 0.0399s/iter; left time: 506.3242s
+	iters: 200, epoch: 2 | loss: 0.2266840
+	speed: 0.0161s/iter; left time: 203.1351s
+Epoch: 2 cost time: 4.156712055206299
+Epoch: 2, Steps: 261 | Train Loss: 0.5321977 Vali Loss: 0.4599302 Test Loss: 0.5216675
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.2725422
+	speed: 0.0429s/iter; left time: 533.1859s
+	iters: 200, epoch: 3 | loss: 0.2376699
+	speed: 0.0162s/iter; left time: 200.1681s
+Epoch: 3 cost time: 4.182703256607056
+Epoch: 3, Steps: 261 | Train Loss: 0.5054309 Vali Loss: 0.4574266 Test Loss: 0.5203286
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.2133217
+	speed: 0.0397s/iter; left time: 483.5089s
+	iters: 200, epoch: 4 | loss: 0.2276582
+	speed: 0.0157s/iter; left time: 190.0516s
+Epoch: 4 cost time: 4.175983428955078
+Epoch: 4, Steps: 261 | Train Loss: 0.4946657 Vali Loss: 0.4571103 Test Loss: 0.5189902
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.2781235
+	speed: 0.0421s/iter; left time: 500.9413s
+	iters: 200, epoch: 5 | loss: 0.2105410
+	speed: 0.0159s/iter; left time: 187.1415s
+Epoch: 5 cost time: 4.432060956954956
+Epoch: 5, Steps: 261 | Train Loss: 0.4890621 Vali Loss: 0.4582542 Test Loss: 0.5201738
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 6 | loss: 0.2286856
+	speed: 0.0463s/iter; left time: 538.6619s
+	iters: 200, epoch: 6 | loss: 0.2333585
+	speed: 0.0130s/iter; left time: 149.7411s
+Epoch: 6 cost time: 4.012124538421631
+Epoch: 6, Steps: 261 | Train Loss: 0.4864632 Vali Loss: 0.4583262 Test Loss: 0.5202830
+EarlyStopping counter: 5 out of 5
+Early stopping
+>>>>>>>testing : ETTm2_sl96_pl192_ADKF_ftETTm2_slM_pl96_dm192_eb16_timeF<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2689
+Inference time:  1.111443281173706

@@ -1,0 +1,78 @@
+/home/zyg/miniconda3/envs/informer/lib/python3.10/site-packages/torch/cuda/__init__.py:54: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Logging to file: ./Re_log/ETTm1_sl96_pl192_ADKF_ETTm1_sl96_20260227_224800.log
+Args in experiment:
+Namespace(is_training=1, model_id='ETTm1_sl96_pl192', model='ADKF', data='ETTm1', root_path='/home/zyg/data/time_series/ETT-small/', data_path='ETTm1.csv', features='M', target='OT', freq='t', checkpoints='./checkpoints/', seq_len=96, label_len=48, pred_len=192, individual=False, seg=20, experts=4, channel=7, d_model=16, d_ff=32, var_num=7, num_experts=4, kernel_size=25, layers=2, embed='timeF', e_layers=2, moving_avg=25, do_predict=False, rev=False, dropout=0.1, channel_independence=1, decomp_method='AdaptiveDecomp', use_norm=1, down_sampling_layers=3, down_sampling_window=2, down_sampling_method='avg', top_k=5, num_layers=10, num_workers=10, itr=1, train_epochs=50, batch_size=16, patience=5, learning_rate=0.001, lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', RATIO=10000000.0, task_name='long_term_forecast', d_layers=1, factor=3, enc_in=7, dec_in=7, c_out=7, des='Exp', use_future_temporal_feature=0, activation='gelu', output_attention=False, n_heads=8, affine=0, subtract_last=0, decomposition=0, stride=8, padding_patch='end', accumulation_steps=32)
+Use GPU: cuda:0
+Number of parameters: 0.081M
+>>>>>>>start training : ETTm1_sl96_pl192_ADKF_ftETTm1_slM_pl96_dm192_eb16_timeF>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 8353
+val 2689
+test 2689
+	iters: 100, epoch: 1 | loss: 0.2733968
+	speed: 0.0182s/iter; left time: 235.6103s
+	iters: 200, epoch: 1 | loss: 0.2359899
+	speed: 0.0108s/iter; left time: 138.8473s
+Epoch: 1 cost time: 3.9814016819000244
+Epoch: 1, Steps: 261 | Train Loss: 0.5953285 Vali Loss: 0.7337219 Test Loss: 0.5747575
+Validation loss decreased (inf --> 0.733722).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.2656399
+	speed: 0.0379s/iter; left time: 481.1628s
+	iters: 200, epoch: 2 | loss: 0.2538770
+	speed: 0.0180s/iter; left time: 226.9101s
+Epoch: 2 cost time: 4.165888547897339
+Epoch: 2, Steps: 261 | Train Loss: 0.5240440 Vali Loss: 0.7153081 Test Loss: 0.5427521
+Validation loss decreased (0.733722 --> 0.715308).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.2736132
+	speed: 0.0430s/iter; left time: 534.7790s
+	iters: 200, epoch: 3 | loss: 0.2285418
+	speed: 0.0147s/iter; left time: 181.8519s
+Epoch: 3 cost time: 4.430324554443359
+Epoch: 3, Steps: 261 | Train Loss: 0.5067355 Vali Loss: 0.7115592 Test Loss: 0.5348178
+Validation loss decreased (0.715308 --> 0.711559).  Saving model ...
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.2698287
+	speed: 0.0403s/iter; left time: 489.8029s
+	iters: 200, epoch: 4 | loss: 0.2171074
+	speed: 0.0154s/iter; left time: 186.3315s
+Epoch: 4 cost time: 4.245357990264893
+Epoch: 4, Steps: 261 | Train Loss: 0.4999045 Vali Loss: 0.7138320 Test Loss: 0.5311262
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.2473348
+	speed: 0.0357s/iter; left time: 424.9050s
+	iters: 200, epoch: 5 | loss: 0.2051907
+	speed: 0.0142s/iter; left time: 167.5043s
+Epoch: 5 cost time: 3.8563497066497803
+Epoch: 5, Steps: 261 | Train Loss: 0.4960473 Vali Loss: 0.7189317 Test Loss: 0.5313098
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 6 | loss: 0.2626077
+	speed: 0.0374s/iter; left time: 435.1219s
+	iters: 200, epoch: 6 | loss: 0.2558093
+	speed: 0.0152s/iter; left time: 175.2925s
+Epoch: 6 cost time: 4.2493956089019775
+Epoch: 6, Steps: 261 | Train Loss: 0.4943355 Vali Loss: 0.7165489 Test Loss: 0.5291886
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 7 | loss: 0.2406183
+	speed: 0.0417s/iter; left time: 475.1238s
+	iters: 200, epoch: 7 | loss: 0.1823567
+	speed: 0.0148s/iter; left time: 167.4245s
+Epoch: 7 cost time: 4.439937591552734
+Epoch: 7, Steps: 261 | Train Loss: 0.4935747 Vali Loss: 0.7145930 Test Loss: 0.5294318
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 8 | loss: 0.2797227
+	speed: 0.0389s/iter; left time: 432.6091s
+	iters: 200, epoch: 8 | loss: 0.2502447
+	speed: 0.0146s/iter; left time: 161.2637s
+Epoch: 8 cost time: 3.993807792663574
+Epoch: 8, Steps: 261 | Train Loss: 0.4929988 Vali Loss: 0.7143580 Test Loss: 0.5289981
+EarlyStopping counter: 5 out of 5
+Early stopping
+>>>>>>>testing : ETTm1_sl96_pl192_ADKF_ftETTm1_slM_pl96_dm192_eb16_timeF<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2689
+Inference time:  1.3144071102142334
